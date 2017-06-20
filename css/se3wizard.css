@@ -1,0 +1,174 @@
+/* 
+######################## WIZARD */
+/* For mobile devices: */
+.se3formwizard{
+	margin:10px;
+}
+.se3wizardheader{
+	-webkit-border-top-left-radius: 5px;
+   	-moz-border-top-left-radius: 5px;
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius: 5px;
+   	-moz-border-top-right-radius: 5px;
+	border-top-right-radius:5px;
+	background:#527749;
+	padding:10px;
+	text-transform:uppercase;
+	font-size:16px;
+	color:#fff;
+}
+.se3wizardtabbar{
+
+}
+.se3wizardtabbar ul{
+	padding:0;margin:0;list-style-type:none;
+}
+.se3wizardtabbar ul li a{
+	display:block;
+	padding:5px 10px;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-size:18px;
+	border-bottom:1px solid #D7DCE6;
+	border-right:1px solid #D7DCE6;
+	color:#11361F;
+}
+.se3wizardprogressbx{
+	margin:10px;
+}
+.se3wizardtabbar ul li a.inactive{
+	color:#D7DCE6;
+	cursor:default;
+}
+.se3wizardtabbar ul li a.current{
+	background:#B8DDC6;
+	color:#11361F;
+	border-right:none;
+}
+.se3wizardcontent{
+	padding:5px;
+}
+.se3wizardcontent h3{
+	color:#B55B18;
+	padding:0;
+	margin:5px 0;
+	font-style: normal;
+    font-weight: 700;
+}
+.se3wizardloader{
+	display: block;
+    margin: 0 auto;
+}
+.se3wizardbuttons{
+	clear:both;
+}
+.se3wizardbuttons:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+.se3wizardbuttons button{
+	color:#fff;
+	width:100%;
+	margin-top:10px;
+}
+.se3wizardbuttons div.se3wizardbuttonback{
+	width:49%;
+	float:left;
+}
+.se3wizardbuttons div.se3wizardbuttonforward,
+.se3wizardbuttons div.se3wizardbuttonsave{
+	width:49%;
+	float:right;
+}
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+	.se3formwizard{
+		margin:10px;
+	}
+	.se3wizardheader{
+		-webkit-border-top-left-radius: 5px;
+		-moz-border-top-left-radius: 5px;
+		border-top-left-radius:5px;
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-top-right-radius: 5px;
+		border-top-right-radius:5px;
+		background:#527749;
+		padding:10px;
+		text-transform:uppercase;
+		font-size:16px;
+		color:#fff;
+	}
+	.se3wizardtabbar{
+		float:left;
+		width:20%;
+	}
+	.se3wizardtabbar ul{
+		padding:0;margin:0;list-style-type:none;
+	}
+	.se3wizardtabbar ul li a{
+		display:block;
+		padding:20px 10px;
+		text-transform:uppercase;
+		text-decoration:none;
+		font-size:18px;
+		border-bottom:1px solid #D7DCE6;
+		border-right:1px solid #D7DCE6;
+		color:#11361F;
+	}
+	.se3wizardprogressbx{
+		margin:10px;
+	}
+	.se3wizardtabbar ul li a.inactive{
+		color:#D7DCE6;
+		cursor:default;
+	}
+	.se3wizardtabbar ul li a.current{
+		background:#B8DDC6;
+		color:#11361F;
+		border-right:none;
+	}
+	.se3wizardcontent{
+		float:right;
+		width:75%;
+		padding:5px;
+	}
+	.se3wizardcontent h3{
+		color:#B55B18;
+		padding:0;
+		margin:5px 0;
+		font-style: normal;
+		font-weight: 700;
+	}
+	.se3wizardloader{
+		display: block;
+		margin: 0 auto;
+	}
+	.se3wizardbuttons{
+		clear:both;
+	}
+	.se3wizardbuttons:after { 
+	   content: "."; 
+	   visibility: hidden; 
+	   display: block; 
+	   height: 0; 
+	   clear: both;
+	}
+	.se3wizardbuttons button{
+		color:#fff;
+		width:100%;
+		margin-top:10px;
+	}
+	.se3wizardbuttons div.se3wizardbuttonback{
+		width:20%;
+		float:left;
+	}
+	.se3wizardbuttons div.se3wizardbuttonforward,
+	.se3wizardbuttons div.se3wizardbuttonsave{
+		width:20%;
+		float:right;
+	}
+}
+/* END WIZARD */

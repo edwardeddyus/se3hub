@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{title}</title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+		<style>
+		*{font-family: 'Open Sans', sans-serif;}
+		</style>
+		<!--//bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css">
+
+		<!--//JQuery-->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		
+		<!--//bootstrap-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js" type="text/javascript"></script>
+		 <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<!--//SE3 Wizard -->
+		<link rel="stylesheet" type="text/css" href="css/se3wizard.css">
+		<script src="js/se3wizard-min.js"></script>
+		<script language="JavaScript">
+		$(document).ready(function(){
+			se3wizard.init({
+					tabs: {
+							'Step 1': 'demo/Step1.html',
+							'Step 2':'demo/Step2.html',
+							'Step 3':'demo/Step3.html',
+							'Step 4':'demo/Step4.html'
+						},
+					config: {
+							'primarydiv':'Se3wizarddiv',
+							'headerTxt' : 'My Se3 Wizard',
+							'loadinggraphic' : 'img/loading.gif',
+							'backbtntext' : 'Back',
+							'backbtnclass' : 'btn-warning',
+							'continuebtntext' : 'Continue',
+							'continuebtnclass' : 'btn-warning',
+							'finishbtntext' : 'Finish and Save',
+							'finishbtnclass' : 'btn-warning',
+							'saveurl' : 'demo/Save.html'
+						}
+				});
+			// Custom Events
+			se3wizard.validate=function(){
+				var ErrorFlag=true;
+				$('.se3wizardcontent input.required').each(function() {
+					if($.trim($(this).val()) == ''){
+						alert('Email address is required!');
+						$(this).focus();
+						ErrorFlag=false;
+					}
+				});
+				return ErrorFlag;
+			};
+			se3wizard.onFinish=function(){
+				$('#se3wizardformdata').append('<div class="alert alert-info" role="alert">I\'m called when the saveurl is completed</div>');
+			};
+			se3wizard.onContinue=function(){
+				$('#alerts').append('<div class="alert alert-info" role="alert">I\'m called when the Continue button is clicked</div>');
+			};
+			se3wizard.onBack=function(){
+				$('#alerts').append('<div class="alert alert-info" role="alert">I\'m called when the Back button is clicked</div>');
+			};
+			se3wizard.onStepComplete=function(){
+				$('#se3wizardformdata').append('<div class="alert alert-info" role="alert">I\'m called when ajax request to the step is complete</div>');
+			};
+		});
+		</script>
+	</head>
+	<body>
+		<div id="alerts"></div>
+		<div id="Se3wizarddiv"></div>
+	</body>
+</html>

@@ -2,7 +2,7 @@
 
 A responsive, jquery, bootstrap, ajax wizard.
 
-##Methods
+## Methods
 
 **init**
 Loads the wizard takes JSON used to setup the wizard
